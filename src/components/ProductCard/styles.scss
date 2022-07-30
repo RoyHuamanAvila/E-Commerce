@@ -9,12 +9,20 @@
 .card-image{
 		height: 350px;
 		display: flex;
+		position: relative;
     img{
 			  display: block;
         max-height: 100%;
         width: 100%;
 			  margin: auto 0px;
     }
+}
+.sticker{
+	display: block;
+	position: absolute;
+	top: 25%;
+	height: auto;
+	width: 100%;
 }
 .card-timer{
     position: absolute;

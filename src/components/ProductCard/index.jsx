@@ -12,6 +12,7 @@ function ProductCard(props) {
     <div className="card-container">
       <div className="card-image">
         <span className="card-timer">00:00:00</span>
+        <img className="sticker" src="https://www.hostinet.com/formacion/wp-content/uploads/2017/01/agotado-sello.png" alt="" />
         <img src={product.image} alt="" />
       </div>
       <div className="card-title">
