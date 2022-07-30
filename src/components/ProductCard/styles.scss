@@ -1,22 +1,25 @@
 .card-container{
     width: 100%;
     display: inline-block;
-    padding: 0px 25px 50px;  
+    padding: 0px 25px 50px;
     box-sizing: border-box;
     -webkit-user-select: none;
     user-select: none;
 }
 .card-image{
-    background-color: #f3f3f3ff;
+		height: 350px;
+		display: flex;
     img{
-        height: auto;
+			  display: block;
+        max-height: 100%;
         width: 100%;
-    }    
+			  margin: auto 0px;
+    }
 }
 .card-timer{
     position: absolute;
-    padding-top: 5px;
-    padding-left: 5px;
+    padding: 10px;
+		background-color: rgba(255, 255, 255, 0.602);
     font-size: 14px;
 }
 
@@ -28,6 +31,13 @@
     letter-spacing: 2px;
     margin-top: 20px;
     margin-bottom: 10px;
+		text-overflow: ellipsis;
+    p{
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
 }
 .card-price{
     font-size: 14px;
