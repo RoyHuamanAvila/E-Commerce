@@ -1,17 +1,24 @@
 import './styles.scss';
 
-function ProductCard() {
+function ProductCard(props) {
+  const { product } = props;
+
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
   return (
     <div className="card-container">
       <div className="card-image">
         <span className="card-timer">00:00:00</span>
-        <img src="https://mesajilgamer.com/wp-content/uploads/sites/7/2021/05/022048-4.png" alt="" />
+        <img src={product.image} alt="" />
       </div>
       <div className="card-title">
-        Audifonos Logitech G635
+        <p>{product.title}</p>
       </div>
       <div className="card-price">
-        S/.445
+        {formatter.format(product.price)}
       </div>
     </div>
   );
