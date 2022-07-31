@@ -11,7 +11,6 @@ function ListProducts() {
     const fetchData = async () => {
       const result = await getProducts();
       setProducts(result);
-      console.log(result);
     };
     fetchData();
   }, []);
