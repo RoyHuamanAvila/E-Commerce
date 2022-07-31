@@ -1,0 +1,39 @@
+.list-container {
+  width: 300px;
+  position: relative;
+  margin: 0px auto;
+}
+
+.large-space {
+  margin: 0 -25px;
+}
+
+@media screen and (min-width: 480px) {
+  .list-container {
+    width: 420px;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .list-container {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list-container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list-container {
+    width: 950px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list-container {
+    width: 1100px;
+  }
+}
