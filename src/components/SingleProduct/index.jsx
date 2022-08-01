@@ -4,6 +4,11 @@ import { getProduct } from '../../services/products';
 import './styles.scss';
 
 function SingleProduct() {
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
   const { id } = useParams();
   const [product, setProduct] = useState([]);
 
@@ -23,7 +28,7 @@ function SingleProduct() {
           {product.title}
         </div>
         <div className="price-product">
-          {product.price}
+          {formatter.format(product.price)}
         </div>
         <div className="rating-product">
           18.9
