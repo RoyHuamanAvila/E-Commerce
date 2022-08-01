@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import './styles.scss';
 
 function Header() {
@@ -5,11 +7,17 @@ function Header() {
     <div className="container-header">
       <div className="header">
         <div className="header-tabs">
-          <div className="tab-home">HOME</div>
-          <div className="tab-about">ABOUT</div>
+          <Link to="/" className="tab">
+            <div className="tab-home">HOME</div>
+          </Link>
+          <Link to="/about" className="tab">
+            <div className="tab-about">ABOUT</div>
+          </Link>
         </div>
         <div className="header-logo">
-          <h1>SHOP</h1>
+          <Link to="/" className="tab">
+            <h1>SHOP</h1>
+          </Link>
         </div>
         <div className="header-menu">
           <div>Menu</div>
