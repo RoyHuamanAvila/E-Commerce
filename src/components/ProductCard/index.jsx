@@ -1,3 +1,5 @@
+/* eslint max-len: ["error", { "ignoreUrls": true }] */
+
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -28,14 +30,34 @@ function ProductCard(props) {
   }, []);
 
   return (
-    timer > 1 ?
-      <Link to={`/products/${product.id}`}>
+    timer > 1
+      ? (
+        <Link to={`/products/${product.id}`}>
+          <div className="card-container">
+            <div className="card-image">
+              <span className="card-timer">{fmtMSS(timer)}</span>
+              {
+                timer < 1 ? <img className="sticker" src="https://www.hostinet.com/formacion/wp-content/uploads/2017/01/agotado-sello.png" alt="" />
+                  : <div>.</div>
+              }
+              <img src={product.image} alt="" />
+            </div>
+            <div className="card-title">
+              <p>{product.title}</p>
+            </div>
+            <div className="card-price">
+              {formatter.format(product.price)}
+            </div>
+          </div>
+        </Link>
+      )
+      : (
         <div className="card-container">
           <div className="card-image">
             <span className="card-timer">{fmtMSS(timer)}</span>
             {
               timer < 1 ? <img className="sticker" src="https://www.hostinet.com/formacion/wp-content/uploads/2017/01/agotado-sello.png" alt="" />
-                : <div></div>
+                : <div>.</div>
             }
             <img src={product.image} alt="" />
           </div>
@@ -46,23 +68,7 @@ function ProductCard(props) {
             {formatter.format(product.price)}
           </div>
         </div>
-      </Link>
-      : <div className="card-container">
-        <div className="card-image">
-          <span className="card-timer">{fmtMSS(timer)}</span>
-          {
-            timer < 1 ? <img className="sticker" src="https://www.hostinet.com/formacion/wp-content/uploads/2017/01/agotado-sello.png" alt="" />
-              : <div></div>
-          }
-          <img src={product.image} alt="" />
-        </div>
-        <div className="card-title">
-          <p>{product.title}</p>
-        </div>
-        <div className="card-price">
-          {formatter.format(product.price)}
-        </div>
-      </div>
+      )
   );
 }
 

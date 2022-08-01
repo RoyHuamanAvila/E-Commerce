@@ -24,5 +24,6 @@ module.exports = {
     "import/prefer-default-export": "off",
     "click-events-have-key-events": "off",
     'max-len': ["error", { "code": 130 }],
+    "ignoreUrls": true,
   },
 };
