@@ -23,5 +23,6 @@ module.exports = {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/prefer-default-export": "off",
     "click-events-have-key-events": "off",
+    'max-len': ["error", { "code": 130 }],
   },
 };
