@@ -1,8 +1,22 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 import './styles.scss';
 
+import SideBar from '../SideBar';
+
 function Header() {
+  const [open, setOpen] = useState();
+
+  const HandleMenu = () => {
+    const sideBar = document.querySelector('.sideBar');
+    const buttonClose = document.querySelector('.close-container');
+
+    console.log(open);
+    setOpen(sideBar.classList.toggle('sideBar-open'));
+    setOpen(buttonClose.addEventListener('click', HandleMenu));
+  };
+
   return (
     <div className="container-header">
       <div className="header">
@@ -20,9 +34,10 @@ function Header() {
           </Link>
         </div>
         <div className="header-menu">
-          <div>Menu</div>
+          <button type="button" onClick={HandleMenu}>Menu</button>
         </div>
       </div>
+      <SideBar />
     </div>
   );
 }
