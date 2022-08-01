@@ -3,6 +3,10 @@
   color: #080808;
 }
 
+.sideBar-open {
+  width: 340px !important;
+}
+
 .container-header {
   font-family: 'Catamaran', sans-serif;
   -webkit-user-select: none;
@@ -42,9 +46,15 @@
   color: #080808;
   position: relative;
 
-  div {
+  button {
     vertical-align: middle;
     display: inline-block;
+    border: 0px;
+    background-color: white;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }
 

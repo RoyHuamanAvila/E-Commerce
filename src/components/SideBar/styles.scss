@@ -1,0 +1,33 @@
+.sideBar {
+  background-color: #080808;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 0px;
+  height: 100%;
+}
+
+.close-container {
+  color: white;
+  font-size: 23px;
+  font-weight: bolder;
+  text-align: right;
+  background-color: #080808;
+  border: 0px;
+  width: max-content;
+  margin: 5px 0px;
+}
+
+.container-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 25px auto;
+}
+
+.tab-item {
+  color: white;
+  font-size: 23px;
+  padding: 5px 0px;
+}
