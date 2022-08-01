@@ -1,0 +1,75 @@
+.perfil-container {
+  margin: 0px auto;
+  width: 300px;
+  font-family: 'Catamaran', sans-serif;
+}
+
+.perfil-image {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.perfil-description {
+  position: absolute;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.occupation {
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.description {
+  color: #929292;
+}
+
+.learning {
+  margin: 20px 0px;
+}
+
+@media screen and (min-width: 480px) {
+  .perfil-container {
+    width: 420px;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .perfil-container {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .perfil-container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .perfil-container {
+    width: 950px;
+  }
+
+  .perfil-image {
+    display: inline-block;
+    width: 50%;
+  }
+
+  .perfil-description {
+    position: absolute;
+    width: 40%;
+    display: inline-block;
+    padding: 0px 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .perfil-container {
+    width: 1100px;
+  }
+}
