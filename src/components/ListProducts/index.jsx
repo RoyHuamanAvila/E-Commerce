@@ -22,7 +22,7 @@ function ListProducts() {
   return (
     <div className="list-container">
       <div className="large-space">
-        {products.map((product) => <ProductCard key={product.id} product={product} time={randomNumberInRange(1, 10)} />)}
+        {products.map((product) => <ProductCard key={product.id} product={product} time={randomNumberInRange(60, 360)} />)}
       </div>
     </div>
   );
