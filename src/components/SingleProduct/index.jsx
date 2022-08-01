@@ -1,25 +1,35 @@
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { getProduct } from '../../services/products';
 import './styles.scss';
 
 function SingleProduct() {
+  const { id } = useParams();
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await getProduct(id);
+      setProduct(result);
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className="single-container">
-      <img className="img-product" src="https://dojiw2m9tvv09.cloudfront.net/48881/product/expl1444.png" alt="" />
+      <img className="img-product" src={product.image} alt="" />
       <div className="specifications">
         <div className="title-product">
-          COUGAR EXPLORE
+          {product.title}
         </div>
         <div className="price-product">
-          $ 1.129.00
+          {product.price}
         </div>
         <div className="rating-product">
           18.9
         </div>
         <div className="description-product">
-          Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Eos, consequuntur eum odit dignissimos
-          culpa,
-          dolor laboriosam aut saepe repudiandae corrupti
-          eius. Doloribus commodi adipisci placeat blanditiis assumenda aliquam culpa. Eveniet.
+          {product.description}
         </div>
         <button type="button" className="add-cart">
           ADD TO CART
