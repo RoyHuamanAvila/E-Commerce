@@ -15,7 +15,7 @@ function ProductCard(props) {
   });
   const fmtMSS = (s) => {
     let sec = s;
-    const timeFormat = (sec - (sec %= 60)) / 60 + (9 < sec ? ':' : ':0') + sec;
+    const timeFormat = (sec - (sec %= 60)) / 60 + (sec > 9 ? ':' : ':0') + sec;
     return timeFormat;
   };
 
