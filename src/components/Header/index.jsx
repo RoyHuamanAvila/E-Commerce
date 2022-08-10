@@ -6,15 +6,10 @@ import './styles.scss';
 import SideBar from '../SideBar';
 
 function Header() {
-  const [open, setOpen] = useState();
+  const [open, setOpen] = useState(false);
 
-  const HandleMenu = () => {
-    const sideBar = document.querySelector('.sideBar');
-    const buttonClose = document.querySelector('.close-container');
-
-    console.log(open);
-    setOpen(sideBar.classList.toggle('sideBar-open'));
-    setOpen(buttonClose.addEventListener('click', HandleMenu));
+  const handleMenu = () => {
+    setOpen(!open);
   };
 
   return (
@@ -34,10 +29,10 @@ function Header() {
           </Link>
         </div>
         <div className="header-menu">
-          <button type="button" onClick={HandleMenu}>Menu</button>
+          <button type="button" onClick={handleMenu}>Menu</button>
         </div>
       </div>
-      <SideBar />
+      <SideBar style={open ? 'sideBar-open' : ''} handleMenu={handleMenu} />
     </div>
   );
 }
