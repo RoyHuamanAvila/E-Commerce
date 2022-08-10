@@ -1,11 +1,11 @@
-import SingleManager from '../components/SingleManager';
+/* eslint-disable react/function-component-definition */
 
-function ProductDetail() {
-  return (
-    <div>
-      <SingleManager />
-    </div>
-  );
-}
+import AboutManager from '../components/AboutManager';
+
+const ProductDetail = () => (
+  <div>
+    <AboutManager />
+  </div>
+);
 
 export default ProductDetail;

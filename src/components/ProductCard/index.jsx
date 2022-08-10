@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 
 import './styles.scss';
 
-function ProductCard(props) {
-  const { product, time } = props;
+function ProductCard({ product, time }) {
   const [timer, setTimer] = useState(time);
 
   const formatter = new Intl.NumberFormat('en-US', {
